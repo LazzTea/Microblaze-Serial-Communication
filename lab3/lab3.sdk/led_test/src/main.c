@@ -3,10 +3,17 @@
 #include <xgpio.h>
 #include "xparameters.h"
 
-int get_digit() {
+int get_number() {
     char c = inbyte();  // Wait for and read a character
+	int digit = c - '0';
     outbyte(c);        // Echo it back to the serial monitor so you can see it
-    return c - '0';    // Convert ASCII character to actual integer
+	while (c != '\r')  // Wait until Enter key is pressed
+	{
+        c = inbyte();
+        outbyte(c);    // Echo each character until Enter is pressed
+		digit = digit * 10 + (c - '0');
+	}
+    return digit;    // Convert ASCII character to actual integer
 }
 
 int main() {
@@ -20,10 +27,9 @@ int main() {
   XGpio_SetDataDirection(&gpio, 2, 0x00000000); 
 
   xil_printf("Please enter numbers in the form a/b. \n\r");
-  a = get_digit();    // Read first number
-  inbyte();           // Skip the '/' character
+  a = get_number();    // Read first number
   outbyte('/');       // Echo the '/' character
-  b = get_digit();    // Read second number
+  b = get_number();    // Read second number
 
   c = a * b;
 
