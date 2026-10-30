@@ -29,7 +29,8 @@ int main() {
   XGpio_Initialize(&gpio, 0);
   XGpio_SetDataDirection(&gpio, 2, 0x00000000); 
 
-  xil_printf("Please enter numbers in the form a/b. \n\r");
+  while (1) {
+      xil_printf("Please enter numbers in the form a/b. \n\r");
   a = get_number();    // Read first number
   outbyte('/');       // Echo the '/' character
   b = get_number();    // Read second number
@@ -38,13 +39,12 @@ int main() {
 
   xil_printf("\n\rOutput %d\n\r", c);
 
-  while (1) {
-    if (c > 100) {
-      led = 0xFFFFFFFF;
-    } else {
-      led = 0x00000000;
-    }
+  if (c > 100) {
+    led = 0xFFFFFFFF;
+  } else {
+    led = 0x00000000;
+  }
 
-    XGpio_DiscreteWrite(&gpio, 2, led);
+  XGpio_DiscreteWrite(&gpio, 2, led);
   }
 }
