@@ -12,7 +12,7 @@ int get_number() {
 	while (c != '\r')
 	{
     c = inbyte();
-    if (c <= '0' || c >= '9') continue;
+    if (c < '0' || c > '9') continue;
     outbyte(c);
 		digit = digit * 10 + (c - '0');
 	}
