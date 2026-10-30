@@ -4,12 +4,13 @@
 #include "xparameters.h"
 
 int get_number() {
+  // First Value
   char c = inbyte();
   outbyte(c);
 	int digit = c - '0';
   
 
-	while (c != '\r')
+	while (c != '/')
 	{
     c = inbyte();
     if (c < '0' || c > '9') continue;
@@ -17,7 +18,31 @@ int get_number() {
 		digit = digit * 10 + (c - '0');
 	}
 
-  return digit;
+  outbyte(c);
+
+  // Deliminter
+  // while (1) {
+  //   c = inbyte();
+  //   if (c != '/') continue
+  //   outbyte(c);
+  //   break;
+  // }
+
+  // Second Value
+  c = inbyte();
+  outbyte(c);
+	int digit2 = c - '0';
+  
+
+	while (c != '\r')
+	{
+    c = inbyte();
+    if (c < '0' || c > '9') continue;
+    outbyte(c);
+		digit2 = digit2 * 10 + (c - '0');
+	}
+
+  return digit * digit2;
 }
 
 int main() {
@@ -32,11 +57,11 @@ int main() {
 
   while (1) {
     xil_printf("Please enter numbers in the form a/b. \n\r");
-    a = get_number();    // Read first number
-    outbyte('/');
-    b = get_number();    // Read second number
+    // a = get_number();    // Read first number
+    // outbyte('/');
+    // b = get_number();    // Read second number
 
-    c = a * b;
+    c = get_number();
 
     xil_printf("\n\rOutput %d\n\r", c);
 
