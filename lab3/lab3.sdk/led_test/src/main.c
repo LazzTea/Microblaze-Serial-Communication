@@ -27,7 +27,7 @@ int main() {
 
   c = a * b;
 
-  xil_printf("Output %d", c);
+  xil_printf("\nOutput %d\n", c);
 
   while (1) {
     if (c > 100) {
