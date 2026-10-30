@@ -14,7 +14,10 @@ int main() {
   XGpio_SetDataDirection(&gpio, 2, 0x00000000); 
 
   xil_printf("Please enter numbers in the form a/b. \n\r");
-  scanf("%d/%d", &a, &b);
+  a = get_digit();    // Read first number
+  inbyte();           // Skip the '/' character
+  outbyte('/');       // Echo the '/' character
+  b = get_digit();    // Read second number
 
   c = a * b;
 
