@@ -33,7 +33,7 @@ int main() {
   while (1) {
     xil_printf("Please enter numbers in the form a/b. \n\r");
     a = get_number();    // Read first number
-    outbyte('\\');
+    outbyte('/');
     b = get_number();    // Read second number
 
     c = a * b;
