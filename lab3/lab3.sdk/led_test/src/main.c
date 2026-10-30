@@ -1,33 +1,32 @@
-//AXI GPIO driver
-#include "xgpio.h"
-
-//send data over UART
-#include "xil_printf.h"
-
-//information about AXI peripherals
+#include <stdio.h>
+#include <xil_printf.h>
+#include <xgpio.h>
 #include "xparameters.h"
 
-int main()
-{
-	XGpio gpio;
-	u32 btn, led;
+int main() {
+  int a;
+  int b;
+  int c;
+  XGpio gpio;
+  uint32_t led;
 
-	XGpio_Initialize(&gpio, 0);
+  XGpio_Initialize(&gpio, 0);
+  XGpio_SetDataDirection(&gpio, 2, 0x00000000); 
 
-	XGpio_SetDataDirection(&gpio, 2, 0x00000000); // set LED GPIO channel tristates to All Output
-	XGpio_SetDataDirection(&gpio, 1, 0xFFFFFFFF); // set BTN GPIO channel tristates to All Input
+  xil_printf("Please enter numbers in the form a/b. \n\r");
+  scanf("%d/%d", &a, &b);
 
-	while (1)
-	{
-		btn = XGpio_DiscreteRead(&gpio, 1);
+  c = a * b;
 
-		if (btn != 0) // turn all LEDs on when any button is pressed
-			led = 0xFFFFFFFF;
-		else
-			led = 0x00000000;
+  xil_printf("Output %d", c);
 
-		XGpio_DiscreteWrite(&gpio, 2, led);
+  while (1) {
+    if (c > 100) {
+      led = 0xFFFFFFFF;
+    } else {
+      led = 0x00000000;
+    }
 
-		xil_printf("\rbutton state: %08x", btn);
-	}
+    XGpio_DiscreteWrite(&gpio, 2, led);
+  }
 }
