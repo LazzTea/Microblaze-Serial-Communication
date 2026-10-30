@@ -3,6 +3,12 @@
 #include <xgpio.h>
 #include "xparameters.h"
 
+int get_digit() {
+    char c = inbyte();  // Wait for and read a character
+    outbyte(c);        // Echo it back to the serial monitor so you can see it
+    return c - '0';    // Convert ASCII character to actual integer
+}
+
 int main() {
   int a;
   int b;
