@@ -57,55 +57,58 @@ int main() {
   // Connect Keyboard to GPIO
   Xil_Out32(myDevice.GPIO_addr, 0xF);
 
-  xil_printf("Player 1 Pick your reponse by number Rock (1), Paper (2), Scissors (3). \n\r");
-  playerPC = get_number();
+  while (1) {
 
-  // Get Button Press on keypad
-  keystate = KYPD_getKeyStates(&myDevice);
-  status = KYPD_getKeyPressed(&myDevice, keystate, &key);
+    xil_printf("Player 1 Pick your reponse by number Rock (1), Paper (2), Scissors (3). \n\r");
+    playerPC = get_number();
 
-  // Print key detect if a new key is pressed or if status has changed
-  if (status == KYPD_SINGLE_KEY && (status != last_status || key != last_key)) {
-    xil_printf("Key Pressed on Keypard: %c\r\n", (char) key);
-    playerFPGA = key;
-    last_key = key;
-  } else if (status == KYPD_MULTI_KEY && status != last_status) {
-    xil_printf("Error: Multiple keys pressed\r\n");
-    continue;
-  }
+    // Get Button Press on keypad
+    keystate = KYPD_getKeyStates(&myDevice);
+    status = KYPD_getKeyPressed(&myDevice, keystate, &key);
 
-  last_status = status;
+    // Print key detect if a new key is pressed or if status has changed
+    if (status == KYPD_SINGLE_KEY && (status != last_status || key != last_key)) {
+      xil_printf("Key Pressed on Keypard: %c\r\n", (char) key);
+      playerFPGA = key;
+      last_key = key;
+    } else if (status == KYPD_MULTI_KEY && status != last_status) {
+      xil_printf("Error: Multiple keys pressed\r\n");
+      continue;
+    }
 
-  switch(playerPC) {
-    case 0: 
-      switch(playerFPGA) {
-        case 0: xil_printf("It's a tie, rock = rock"); break;
-        case 1: xil_printf("FPGA won!, paper > rock"); break;
-        case 2: xil_printf("PC won!, scissors < rock"); break;
-        default: xil_printf("Error Invalid Input");
-      }
-      break;
+    last_status = status;
 
-    case 1:
-      switch(playerFPGA) {
-        case 0: xil_printf("PC won! rock < paper"); break;
-        case 1: xil_printf("It's a tie, paper = paper"); break;
-        case 2: xil_printf("FPGA won!, scissors > paper"); break;
-        default: xil_printf("Error Invalid Input");
-      }
-      break;
+    switch(playerPC) {
+      case 0: 
+        switch(playerFPGA) {
+          case 0: xil_printf("It's a tie, rock = rock"); break;
+          case 1: xil_printf("FPGA won!, paper > rock"); break;
+          case 2: xil_printf("PC won!, scissors < rock"); break;
+          default: xil_printf("Error Invalid Input");
+        }
+        break;
 
-    case 2:
-      switch(playerFPGA) {
-        case 0: xil_printf("FPGA won!, rock > scissors"); break;
-        case 1: xil_printf("PC won!, paper < scissors"); break;
-        case 2: xil_printf("It's a tie, scissors = scissors"); break;
-        default: xil_printf("Error Invalid Input");
-      }
-      break;
+      case 1:
+        switch(playerFPGA) {
+          case 0: xil_printf("PC won! rock < paper"); break;
+          case 1: xil_printf("It's a tie, paper = paper"); break;
+          case 2: xil_printf("FPGA won!, scissors > paper"); break;
+          default: xil_printf("Error Invalid Input");
+        }
+        break;
 
-    default:
-      xil_printf("Error Invalid Input");
+      case 2:
+        switch(playerFPGA) {
+          case 0: xil_printf("FPGA won!, rock > scissors"); break;
+          case 1: xil_printf("PC won!, paper < scissors"); break;
+          case 2: xil_printf("It's a tie, scissors = scissors"); break;
+          default: xil_printf("Error Invalid Input");
+        }
+        break;
+
+      default:
+        xil_printf("Error Invalid Input");
+    }
   }
 
   KYPD_Cleanup();
