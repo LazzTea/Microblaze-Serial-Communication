@@ -3,6 +3,48 @@
 #include <xgpio.h>
 #include "xparameters.h"
 
+int get_number() {
+  // First Value
+  char c = inbyte();
+  outbyte(c);
+	int digit = c - '0';
+  
+
+	while (c != '/')
+	{
+    c = inbyte();
+    if (c < '0' || c > '9') continue;
+    outbyte(c);
+		digit = digit * 10 + (c - '0');
+	}
+
+  outbyte(c);
+
+  // Deliminter
+  // while (1) {
+  //   c = inbyte();
+  //   if (c != '/') continue
+  //   outbyte(c);
+  //   break;
+  // }
+
+  // Second Value
+  c = inbyte();
+  outbyte(c);
+	int digit2 = c - '0';
+  
+
+	while (c != '\r')
+	{
+    c = inbyte();
+    if (c < '0' || c > '9') continue;
+    outbyte(c);
+		digit2 = digit2 * 10 + (c - '0');
+	}
+
+  return digit * digit2;
+}
+
 int main() {
   int a;
   int b;
@@ -13,14 +55,16 @@ int main() {
   XGpio_Initialize(&gpio, 0);
   XGpio_SetDataDirection(&gpio, 2, 0x00000000); 
 
-  xil_printf("Please enter numbers in the form a/b. \n\r");
-  scanf("%d/%d", &a, &b);
-
-  c = a * b;
-
-  xil_printf("Output %d", c);
-
   while (1) {
+    xil_printf("Please enter numbers in the form a/b. \n\r");
+    // a = get_number();    // Read first number
+    // outbyte('/');
+    // b = get_number();    // Read second number
+
+    c = get_number();
+
+    xil_printf("\n\rOutput %d\n\r", c);
+
     if (c > 100) {
       led = 0xFFFFFFFF;
     } else {

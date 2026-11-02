@@ -3,74 +3,45 @@
 #include <xgpio.h>
 #include "xparameters.h"
 
-int get_number() {
-  // First Value
-  char c = inbyte();
-  outbyte(c);
-	int digit = c - '0';
-  
-
-	while (c != '/')
-	{
-    c = inbyte();
-    if (c < '0' || c > '9') continue;
-    outbyte(c);
-		digit = digit * 10 + (c - '0');
-	}
-
-  outbyte(c);
-
-  // Deliminter
-  // while (1) {
-  //   c = inbyte();
-  //   if (c != '/') continue
-  //   outbyte(c);
-  //   break;
-  // }
-
-  // Second Value
-  c = inbyte();
-  outbyte(c);
-	int digit2 = c - '0';
-  
-
-	while (c != '\r')
-	{
-    c = inbyte();
-    if (c < '0' || c > '9') continue;
-    outbyte(c);
-		digit2 = digit2 * 10 + (c - '0');
-	}
-
-  return digit * digit2;
-}
-
 int main() {
-  int a;
-  int b;
-  int c;
+  int playerPC;
+  int playerFPGA;
+
   XGpio gpio;
   uint32_t led;
 
   XGpio_Initialize(&gpio, 0);
   XGpio_SetDataDirection(&gpio, 2, 0x00000000); 
 
-  while (1) {
-    xil_printf("Please enter numbers in the form a/b. \n\r");
-    // a = get_number();    // Read first number
-    // outbyte('/');
-    // b = get_number();    // Read second number
+  xil_printf("Player 1 Pick your reponse by number Rock (1), Paper (2), Scissors (3). \n\r");
+  scanf("%d", &playerPC);
 
-    c = get_number();
+  switch(playerPC) {
+    case 0: 
+      switch(playerFPGA) {
+        case 0: xil_printf("It's a tie, rock = rock"); break;
+        case 1: xil_printf("FPGA won!, paper > rock"); break;
+        case 2: xil_printf("PC won!, scissors < rock"); break;
+      }
+      break;
 
-    xil_printf("\n\rOutput %d\n\r", c);
+    case 1:
+      switch(playerFPGA) {
+        case 0: xil_printf("PC won! rock < paper"); break;
+        case 1: xil_printf("It's a tie, paper = paper"); break;
+        case 2: xil_printf("FPGA won!, scissors > paper"); break;
+      }
+      break;
 
-    if (c > 100) {
-      led = 0xFFFFFFFF;
-    } else {
-      led = 0x00000000;
-    }
+    case 2:
+      switch(playerFPGA) {
+        case 0: xil_printf("FPGA won!, rock > scissors"); break;
+        case 1: xil_printf("PC won!, paper < scissors"); break;
+        case 2: xil_printf("It's a tie, scissors = scissors"); break;
+      }
+      break;
 
-    XGpio_DiscreteWrite(&gpio, 2, led);
+    default:
+      xil_printf("Error Invalid Input");
   }
 }
