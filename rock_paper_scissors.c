@@ -82,28 +82,28 @@ int main() {
     switch(playerPC) {
       case 1: 
         switch(playerFPGA) {
-          case 1: xil_printf("It's a tie, rock = rock"); break;
-          case 2: xil_printf("FPGA won!, paper > rock"); break;
-          case 3: xil_printf("PC won!, scissors < rock"); break;
-          default: xil_printf("Error Invalid Input");
+          case 1: xil_printf("It's a tie, rock = rock\n\r"); break;
+          case 2: xil_printf("FPGA won!, paper > rock\n\r"); break;
+          case 3: xil_printf("PC won!, scissors < rock\n\r"); break;
+          default: xil_printf("Error Invalid Input\n\r");
         }
         break;
 
       case 2:
         switch(playerFPGA) {
-          case 1: xil_printf("PC won! rock < paper"); break;
-          case 2: xil_printf("It's a tie, paper = paper"); break;
-          case 3: xil_printf("FPGA won!, scissors > paper"); break;
-          default: xil_printf("Error Invalid Input");
+          case 1: xil_printf("PC won! rock < paper\n\r"); break;
+          case 2: xil_printf("It's a tie, paper = paper\n\r"); break;
+          case 3: xil_printf("FPGA won!, scissors > paper\n\r"); break;
+          default: xil_printf("Error Invalid Input\n\r");
         }
         break;
 
       case 3:
         switch(playerFPGA) {
-          case 1: xil_printf("FPGA won!, rock > scissors"); break;
-          case 2: xil_printf("PC won!, paper < scissors"); break;
-          case 3: xil_printf("It's a tie, scissors = scissors"); break;
-          default: xil_printf("Error Invalid Input");
+          case 1: xil_printf("FPGA won!, rock > scissors\n\r"); break;
+          case 2: xil_printf("PC won!, paper < scissors\n\r"); break;
+          case 3: xil_printf("It's a tie, scissors = scissors\n\r"); break;
+          default: xil_printf("Error Invalid Input\n\r");
         }
         break;
 
