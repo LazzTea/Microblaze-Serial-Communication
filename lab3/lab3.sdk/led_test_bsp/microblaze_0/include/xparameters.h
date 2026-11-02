@@ -472,6 +472,17 @@
  
  
 /******************************************************************/
+/* Definitions for driver PMODKYPD */
+#define XPAR_PMODKYPD_NUM_INSTANCES 1
+
+/* Definitions for peripheral PMODKYPD_0 */
+#define XPAR_PMODKYPD_0_DEVICE_ID 0
+#define XPAR_PMODKYPD_0_AXI_LITE_GPIO_BASEADDR 0x00010000
+#define XPAR_PMODKYPD_0_AXI_LITE_GPIO_HIGHADDR 0x00010FFF
+
+
+/******************************************************************/
+
 /* Definitions for driver BRAM */
 #define XPAR_XBRAM_NUM_INSTANCES 2U
 
