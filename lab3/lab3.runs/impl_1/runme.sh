@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Student/lab3/lab3.runs/impl_1'
+HD_PWD='C:/Users/Student/Microblaze-Serial-Communication/lab3/lab3.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

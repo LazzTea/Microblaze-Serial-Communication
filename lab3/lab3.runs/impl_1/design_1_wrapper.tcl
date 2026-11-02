@@ -65,20 +65,20 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Student/lab3/lab3.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Student/lab3/lab3.xpr [current_project]
-  set_property ip_output_repo C:/Users/Student/lab3/lab3.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/Student/Microblaze-Serial-Communication/lab3/lab3.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Student/Microblaze-Serial-Communication/lab3/lab3.xpr [current_project]
+  set_property ip_repo_paths c:/Users/Student/Downloads/vivado-library-2018.2-2/vivado-library-hotfix-PmodOLED_RGB [current_project]
+  set_property ip_output_repo C:/Users/Student/Microblaze-Serial-Communication/lab3/lab3.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/Student/lab3/lab3.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/Users/Student/Microblaze-Serial-Communication/lab3/lab3.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/Student/lab3/lab3.srcs/sources_1/bd/design_1/design_1.bd
+  add_files C:/Users/Student/Microblaze-Serial-Communication/lab3/lab3.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7a35tcpg236-1
