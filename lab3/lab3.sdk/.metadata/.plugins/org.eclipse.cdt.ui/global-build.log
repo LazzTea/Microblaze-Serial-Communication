@@ -113,3 +113,620 @@ make: Nothing to be done for `all'.
 11:20:42 **** Incremental Build of configuration Debug for project led_test ****
 make all 
 make: Nothing to be done for `all'.
+11:24:03 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8544	    292	   3140	  11976	   2ec8	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:24:30 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:26:41 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8588	    292	   3144	  12024	   2ef8	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:26:46 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:27:37 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:31:14 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:82:5: error: expected ';' before 'last_status'
+     last_status = status;
+     ^~~~~~~~~~~
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+make: *** [src/main.o] Error 1
+11:31:17 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8644	    292	   3144	  12080	   2f30	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:31:25 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:31:48 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8636	    292	   3144	  12072	   2f28	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:31:52 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:32:08 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8636	    292	   3144	  12072	   2f28	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:32:13 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:33:53 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8588	    292	   3144	  12024	   2ef8	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:34:21 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7840	    292	   3140	  11272	   2c08	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:34:23 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8596	    292	   3144	  12032	   2f00	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:34:30 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8684	    292	   3144	  12120	   2f58	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:34:34 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:35:53 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8728	    292	   3140	  12160	   2f80	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:36:11 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8724	    292	   3144	  12160	   2f80	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:36:15 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:36:35 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8728	    292	   3140	  12160	   2f80	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:36:54 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8732	    292	   3144	  12168	   2f88	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:37:26 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:38:32 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8648	    292	   3140	  12080	   2f30	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:38:52 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+../src/main.c:47:16: warning: variable 'last_key' set but not used [-Wunused-but-set-variable]
+   uint8_t key, last_key = 'x';
+                ^~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8632	    292	   3140	  12064	   2f20	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:38:57 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:39:13 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:39:56 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:40:25 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8732	    292	   3144	  12168	   2f88	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:40:35 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+../src/main.c:47:16: warning: variable 'last_key' set but not used [-Wunused-but-set-variable]
+   uint8_t key, last_key = 'x';
+                ^~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8716	    292	   3144	  12152	   2f78	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:40:40 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:40:53 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8732	    292	   3144	  12168	   2f88	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:40:56 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:41:40 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8732	    292	   3144	  12168	   2f88	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:41:48 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+../src/main.c:47:16: warning: variable 'last_key' set but not used [-Wunused-but-set-variable]
+   uint8_t key, last_key = 'x';
+                ^~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8716	    292	   3144	  12152	   2f78	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:41:52 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:42:20 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8732	    292	   3144	  12168	   2f88	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:42:35 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:77:24: error: empty character constant
+     playerFPGA = key - '';
+                        ^~
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+make: *** [src/main.o] Error 1
+11:42:40 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8732	    292	   3144	  12168	   2f88	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:42:44 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:44:14 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:50:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8708	    292	   3144	  12144	   2f70	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:44:21 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.
+11:45:28 **** Auto Build of configuration Debug for project led_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../led_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:50:12: warning: unused variable 'led' [-Wunused-variable]
+   uint32_t led;
+            ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: led_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_test.elf  |tee "led_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8728	    292	   3140	  12160	   2f80	led_test.elf
+'Finished building: led_test.elf.size'
+' '
+11:45:32 **** Incremental Build of configuration Debug for project led_test ****
+make all 
+make: Nothing to be done for `all'.

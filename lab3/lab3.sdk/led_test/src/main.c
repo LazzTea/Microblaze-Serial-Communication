@@ -31,7 +31,6 @@ void KYPD_Initialize() {
 
 int get_number() {
   char c = inbyte();
-  outbyte(c);
 	int digit = c - '0';
 
   return digit;
@@ -62,22 +61,32 @@ int main() {
     xil_printf("Player 1 Pick your reponse by number Rock (1), Paper (2), Scissors (3). \n\r");
     playerPC = get_number();
     xil_printf("\n\r");
+    xil_printf("Player number: %d\r\n", playerPC);
 
-    // Get Button Press on keypad
-    keystate = KYPD_getKeyStates(&myDevice);
-    status = KYPD_getKeyPressed(&myDevice, keystate, &key);
 
-    // Print key detect if a new key is pressed or if status has changed
-    if (status == KYPD_SINGLE_KEY && (status != last_status || key != last_key)) {
-      xil_printf("Key Pressed on Keypard: %c\r\n", (char) key);
-      playerFPGA = key;
-      last_key = key;
-    } else if (status == KYPD_MULTI_KEY && status != last_status) {
-      xil_printf("Error: Multiple keys pressed\r\n");
-      continue;
+    while (1){
+
+        // Get Button Press on keypad
+        keystate = KYPD_getKeyStates(&myDevice);
+        status = KYPD_getKeyPressed(&myDevice, keystate, &key);
+
+        // Print key detect if a new key is pressed or if status has changed
+		if (status == KYPD_SINGLE_KEY && (status != last_status || key != last_key)) {
+		  xil_printf("Key Pressed on Keypard: %c\r\n", (char) key);
+		  playerFPGA = key - '0';
+		  last_key = key;
+		  break;
+		} else if (status == KYPD_MULTI_KEY && status != last_status) {
+		  xil_printf("Error: Multiple keys pressed\r\n");
+		  continue;
+		}
+
+	    last_status = status;
+		usleep(10000);
+
     }
 
-    last_status = status;
+
 
     switch(playerPC) {
       case 1: 
@@ -110,7 +119,11 @@ int main() {
       default:
         xil_printf("Error Invalid Input");
     }
+
+    xil_printf("\n\r");
   }
+
+
 
   KYPD_Cleanup();
   return 0;
