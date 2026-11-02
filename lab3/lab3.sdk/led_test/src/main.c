@@ -24,9 +24,9 @@ PmodKYPD myDevice;
 #define DEFAULT_KEYTABLE "0FED789C456B123A"
 
 void KYPD_Initialize() {
-   EnableCaches();
-   KYPD_begin(&myDevice, XPAR_PMODKYPD_0_AXI_LITE_GPIO_BASEADDR);
-   KYPD_loadKeyTable(&myDevice, (u8*) DEFAULT_KEYTABLE);
+  EnableCaches();
+  KYPD_begin(&myDevice, XPAR_PMODKYPD_0_AXI_LITE_GPIO_BASEADDR);
+  KYPD_loadKeyTable(&myDevice, (u8*) DEFAULT_KEYTABLE);
 }
 
 int get_number() {
@@ -42,9 +42,9 @@ int main() {
   int playerFPGA;
 
   // Initialize Keyboard
-  u16 keystate;
+  uint16_t keystate;
   XStatus status, last_status = KYPD_NO_KEY;
-  u8 key, last_key = 'x';
+  uint8_t key, last_key = 'x';
 
   // Initialize GPIO
   XGpio gpio;
