@@ -61,6 +61,7 @@ int main() {
 
     xil_printf("Player 1 Pick your reponse by number Rock (1), Paper (2), Scissors (3). \n\r");
     playerPC = get_number();
+    xil_printf("\n\r");
 
     // Get Button Press on keypad
     keystate = KYPD_getKeyStates(&myDevice);
@@ -79,29 +80,29 @@ int main() {
     last_status = status;
 
     switch(playerPC) {
-      case 0: 
+      case 1: 
         switch(playerFPGA) {
-          case 0: xil_printf("It's a tie, rock = rock"); break;
-          case 1: xil_printf("FPGA won!, paper > rock"); break;
-          case 2: xil_printf("PC won!, scissors < rock"); break;
-          default: xil_printf("Error Invalid Input");
-        }
-        break;
-
-      case 1:
-        switch(playerFPGA) {
-          case 0: xil_printf("PC won! rock < paper"); break;
-          case 1: xil_printf("It's a tie, paper = paper"); break;
-          case 2: xil_printf("FPGA won!, scissors > paper"); break;
+          case 1: xil_printf("It's a tie, rock = rock"); break;
+          case 2: xil_printf("FPGA won!, paper > rock"); break;
+          case 3: xil_printf("PC won!, scissors < rock"); break;
           default: xil_printf("Error Invalid Input");
         }
         break;
 
       case 2:
         switch(playerFPGA) {
-          case 0: xil_printf("FPGA won!, rock > scissors"); break;
-          case 1: xil_printf("PC won!, paper < scissors"); break;
-          case 2: xil_printf("It's a tie, scissors = scissors"); break;
+          case 1: xil_printf("PC won! rock < paper"); break;
+          case 2: xil_printf("It's a tie, paper = paper"); break;
+          case 3: xil_printf("FPGA won!, scissors > paper"); break;
+          default: xil_printf("Error Invalid Input");
+        }
+        break;
+
+      case 3:
+        switch(playerFPGA) {
+          case 1: xil_printf("FPGA won!, rock > scissors"); break;
+          case 2: xil_printf("PC won!, paper < scissors"); break;
+          case 3: xil_printf("It's a tie, scissors = scissors"); break;
           default: xil_printf("Error Invalid Input");
         }
         break;
